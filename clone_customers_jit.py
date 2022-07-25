@@ -172,7 +172,7 @@ def get_customer_payment_methods(customer):
   return payment_method_cards.data + payment_method_bank_accounts.data 
 
 # NOTE: Going into this function, the API key being used is PLATFORM1_SECRET_KEY
-def customer_full_clone(customer):
+def test_share_payment_methods(customer):
   #########################################################################
   # Get the payment methods on this Customer object
   #   Types can be src, card, ba, or pm
@@ -327,7 +327,7 @@ def customer_clone_test():
   print('[+] Attached a debit card as a pm_XXX object')
 
   print('[+] Attempting to fully clone this customer over to another platform')
-  customer_full_clone(customer)
+  test_share_payment_methods(customer)
 
 
 customer_clone_test()
